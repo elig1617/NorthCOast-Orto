@@ -1,0 +1,83 @@
+# Copy to mapping.yaml and replace table/field names with values from:
+#   po-ingest discover
+#
+# Either SmartSuite field slugs (s12ab...) or visible labels work.
+# Linked records are written as arrays of record IDs.
+
+inbox_dir: data/inbox
+processing_dir: data/processing
+review_dir: data/review
+processed_dir: data/processed
+failed_dir: data/failed
+audit_dir: data/audit
+
+matching:
+  min_score: 92
+  unique_margin: 8
+  product_min_score: 94
+
+tables:
+  orders:
+    name: Orders
+    # id: 64abc...   # optional; name lookup is used when omitted
+    fields:
+      title: title
+      po_number: PO Number
+      contract_number: Contract Number
+      requisition_number: Requisition Number
+      order_date: Order Date
+      delivery_date: Delivery Date
+      ship_to_name: Ship To Name
+      ship_to_address: Ship To
+      issuing_office: Issuing Office
+      station_number: Station
+      customer: Account
+      contact: Contact
+      notes: Notes
+      total_amount: Total
+      source_pdf: Source PDF
+    status:
+      slug: status
+      new_order_value: new
+
+  order_lines:
+    name: Order Lines
+    fields:
+      title: title
+      order: Order
+      product: Product
+      line_number: Line
+      description: Description
+      quantity: Quantity
+      unit: Unit
+      unit_price: Unit Price
+      amount: Amount
+
+  customers:
+    name: Accounts
+    match_fields:
+      - title
+      - Station
+      - DoDAAC
+      - City
+    fields:
+      title: title
+
+  contacts:
+    name: Contacts
+    match_fields:
+      - title
+      - Email
+    customer_link: Account
+    fields:
+      title: title
+
+  products:
+    name: Products
+    match_fields:
+      - title
+      - SKU
+      - NSN
+    fields:
+      title: title
+      sku: SKU
