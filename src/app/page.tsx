@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BodyMap } from "@/components/BodyMap";
 import { ConfirmMark } from "@/components/ConfirmMark";
@@ -156,14 +157,23 @@ export default function HomePage() {
               </article>
             ))}
           </div>
-          <ul className="mt-10 space-y-2 text-sm text-ink-soft">
-            {credentialsPublished.map((item) => (
-              <li key={item} className="flex gap-3">
-                <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-10 grid gap-6 md:grid-cols-[12rem_1fr] md:items-start">
+            <Image
+              src="/brand/exemplary-provider.png"
+              alt="Exemplary Provider accredited by The Compliance Team"
+              width={481}
+              height={113}
+              className="w-48 bg-ink p-2"
+            />
+            <ul className="space-y-2 text-sm text-ink-soft">
+              {credentialsPublished.map((item) => (
+                <li key={item} className="flex gap-3">
+                  <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-red" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 

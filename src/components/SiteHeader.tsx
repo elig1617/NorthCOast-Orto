@@ -13,15 +13,15 @@ export function SiteHeader() {
   const menuId = useId();
 
   useEffect(() => {
-    setOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  function closeMenu() {
+    setOpen(false);
+  }
 
   return (
     <header className="border-b border-line bg-paper">
@@ -83,14 +83,22 @@ export function SiteHeader() {
             <ul className="space-y-3">
               {nav.primary.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="font-serif text-2xl no-underline">
+                  <Link
+                    href={item.href}
+                    className="font-serif text-2xl no-underline"
+                    onClick={closeMenu}
+                  >
                     {item.label}
                   </Link>
                   {"children" in item && item.children ? (
                     <ul className="mt-2 space-y-1 pl-3">
                       {item.children.map((child) => (
                         <li key={child.href}>
-                          <Link href={child.href} className="text-sm text-slate no-underline">
+                          <Link
+                            href={child.href}
+                            className="text-sm text-slate no-underline"
+                            onClick={closeMenu}
+                          >
                             {child.label}
                           </Link>
                         </li>

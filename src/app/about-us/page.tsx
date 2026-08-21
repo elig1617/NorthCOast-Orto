@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ConfirmMark } from "@/components/ConfirmMark";
 import { ConfirmNote } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
@@ -69,6 +70,13 @@ export default function AboutPage() {
             </ul>
           </ConfirmNote>
           <div className="border border-line bg-white p-5">
+            <Image
+              src="/brand/exemplary-provider.png"
+              alt="Exemplary Provider accredited by The Compliance Team"
+              width={481}
+              height={113}
+              className="mb-4 w-44 bg-ink p-2"
+            />
             <p className="eyebrow">Published credentials</p>
             <ul className="mt-4 space-y-3 text-sm leading-6 text-ink-soft">
               {credentialsPublished.map((item) => (
