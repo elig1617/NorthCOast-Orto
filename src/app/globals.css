@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3eee4;
+  --paper-2: #e9e2d4;
+  --ink: #161310;
+  --ink-soft: #3d3832;
+  --slate: #5c564c;
+  --line: #cfc6b4;
+  --line-strong: #9c917c;
+  --red: #b42318;
+  --red-deep: #8a1a12;
+  --forest: #1d322c;
+  --forest-soft: #2c4a42;
+  --confirm: #7a4a08;
+  --confirm-bg: #f3e2c2;
+  --white: #fffdf8;
+  --focus: #1d322c;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-slate: var(--slate);
+  --color-line: var(--line);
+  --color-red: var(--red);
+  --color-red-deep: var(--red-deep);
+  --color-forest: var(--forest);
+  --color-confirm: var(--confirm);
+  --color-confirm-bg: var(--confirm-bg);
+  --color-white: var(--white);
+  --font-sans: var(--font-plex);
+  --font-serif: var(--font-serif);
+  --font-mono: var(--font-plex-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-plex), "IBM Plex Sans", Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #ead8d4;
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  background: var(--ink);
+  color: var(--white);
+  padding: 0.6rem 0.9rem;
+  font-size: 0.875rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.eyebrow {
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+}
+
+.confirm-chip {
+  display: inline;
+  background: var(--confirm-bg);
+  color: var(--confirm);
+  font-family: var(--font-plex-mono), ui-monospace, monospace;
+  font-size: 0.78em;
+  letter-spacing: 0.02em;
+  padding: 0.05em 0.35em;
+  border: 1px solid #e0c48a;
+}
+
+.prose-ncos p {
+  max-width: 68ch;
+}
+
+.prose-ncos a {
+  color: var(--red-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose-ncos a:hover {
+  color: var(--red);
+}
