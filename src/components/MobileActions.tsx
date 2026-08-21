@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { confirm } from "@/lib/site";
+import { contact } from "@/lib/site";
 
 export function MobileActions() {
   return (
@@ -8,12 +8,12 @@ export function MobileActions() {
         aria-label="Quick actions"
         className="grid grid-cols-3 text-center text-[0.7rem] font-medium uppercase tracking-wide"
       >
-        <Link href="/contact" className="border-r border-line px-2 py-3 text-ink no-underline">
+        <a href={contact.phoneHref} className="border-r border-line px-2 py-3 text-ink no-underline">
           Call
           <span className="mt-1 block text-[0.62rem] normal-case tracking-normal text-slate">
-            {confirm.phone}
+            {contact.phone}
           </span>
-        </Link>
+        </a>
         <Link href="/providers" className="border-r border-line px-2 py-3 text-ink no-underline">
           Refer
           <span className="mt-1 block text-[0.62rem] normal-case tracking-normal text-slate">

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { SpecTable } from "@/components/SpecTable";
@@ -41,7 +40,7 @@ export default function DapaPage() {
               { label: "Prime vendor", value: contracts.dapa.primeVendor },
               { label: "Supplier #", value: contracts.dapa.supplierNumber },
               { label: "DMLSS", value: contracts.dapa.itemCount },
-              { label: "Status", value: <ConfirmMark>{contracts.dapa.confirm}</ConfirmMark> },
+              { label: "Channel", value: "DLA / DMLSS through the listed prime vendor" },
             ]}
           />
           <div className="mt-8">

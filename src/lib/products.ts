@@ -33,7 +33,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "Request a quote, send a referral, or call the office. Many items can be sourced with a physician prescription.",
     insuranceNote:
-      "NCOS publishes that it bills as an in-network DME provider for most major insurers, Workers’ Compensation, Medicare, and Medicaid. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+      "NCOS publishes that it bills as an in-network DME provider for most major insurers, Workers’ Compensation, Medicare, and Medicaid. Coverage should be verified on each order.",
     products: [
       'OAB: Pull-on OA Brace',
       'OAW: Wrap Around OA Brace with Patella Buttress',
@@ -88,7 +88,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "Call or submit a quote or referral. Pediatric and specialty foot items are available through the current catalog.",
     insuranceNote:
-      "Coverage depends on the item, diagnosis, and payer. NCOS publishes billing support for commercial insurance, Workers’ Comp, Medicare, and Medicaid. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+      "Coverage depends on the item, diagnosis, and payer. NCOS publishes billing support for commercial insurance, Workers’ Comp, Medicare, and Medicaid. Coverage should be verified on each order.",
     products: [
       "BABY FOOT ORTHOSIS",
       "MPO 2000 W/O TRANSFER ATTACHMENT",
@@ -132,7 +132,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "NCOS can source preferred brands or supply from the published catalog. Contact the office for sizing and availability.",
     insuranceNote:
-      "Many wrist and hand supports are billed through DME when medically necessary and prescribed. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+      "Many wrist and hand supports are billed through DME when medically necessary and prescribed. Coverage should be verified on each order.",
     products: [
       "W1: Action Wrist Support",
       "W11: Universal Wrist & Thumb Support",
@@ -174,7 +174,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "Call for current sling, immobilizer, and clavicle inventory. NCOS is manufacturer-neutral and can source preferred brands.",
     insuranceNote:
-      "[CONFIRM CURRENT INSURANCE PARTICIPATION] for specific HCPCS items and payer rules.",
+      "Coverage should be verified on each order for specific HCPCS items and payer rules.",
     products: [
       "Shoulder slings — contact for current models",
       "Shoulder immobilizers — contact for current models",
@@ -200,7 +200,7 @@ export const productCategories: ProductCategory[] = [
     ],
     obtain: "Request a quote or preferred manufacturer. Vendor-neutral sourcing is available.",
     insuranceNote:
-      "[CONFIRM CURRENT INSURANCE PARTICIPATION] before promising coverage on a specific elbow item.",
+      "Coverage should be verified on each order before quoting a specific elbow item.",
     products: [
       "Elbow braces — contact for current models",
       "Elbow immobilizers — contact for current models",
@@ -231,7 +231,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "NCOS lists a TLSO (short front with sternal attachment) in the current catalog and sources additional spinal supports through manufacturer relationships.",
     insuranceNote:
-      "Spinal orthoses often require documentation and a prescription. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+      "Spinal orthoses often require documentation and a prescription. Coverage should be verified on each order.",
     products: [
       "TLSO - Short Front w/ Sternal Attachment",
       "Back supports — contact for current models",
@@ -251,7 +251,7 @@ export const productCategories: ProductCategory[] = [
     needs: ["Post-operative hip support", "Abduction and stabilization needs as prescribed"],
     who: ["Orthopedic practices", "Hospitals", "Rehabilitation settings"],
     obtain: "Call or request a quote. NCOS can source preferred brands.",
-    insuranceNote: "[CONFIRM CURRENT INSURANCE PARTICIPATION]",
+    insuranceNote: "Coverage should be verified on each order.",
     products: ["Hip supports — contact for current models"],
   },
   {
@@ -274,7 +274,7 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "Facilities can request quotes for stocked ER items. NCOS publishes nationwide shipping and local customer service from its Ohio office.",
     insuranceNote:
-      "Facility purchase and patient-billed DME are both supported in the current business model. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+      "Facility purchase and patient-billed DME are both supported in the current business model. Coverage should be verified on each order.",
     products: [
       "Crutches — contact for current models",
       "Ankle stirrups — contact for current models",
@@ -293,9 +293,9 @@ export const productCategories: ProductCategory[] = [
     obtain:
       "Contact the office. Do not treat this page as a complete stimulator catalog until current inventory is confirmed.",
     insuranceNote:
-      "[CONFIRM WHETHER BONE / SPINE STIMULATORS ARE STILL OFFERED AND HOW THEY ARE BILLED]",
+      "Physician-directed bone or spine stimulation is billed according to the item, payer, and documentation requirements.",
     products: [
-      "Bone / spine stimulators — [CONFIRM CURRENT MANUFACTURERS AND MODELS]",
+      "Bone / spine stimulators — contact the office for current manufacturers and models",
     ],
   },
 ];

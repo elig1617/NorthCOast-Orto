@@ -10,65 +10,47 @@ export const company = {
   hours: {
     weekday: "8:00am – 5:00pm",
     weekend: "Closed",
-    note: "[CONFIRM BUSINESS HOURS]",
   },
 } as const;
 
-/**
- * Contact, ownership, and credential fields that must be confirmed
- * before launch. Display the placeholder on the site. Listed values
- * are what the current website publishes — they are not assumed current.
- */
-export const confirm = {
-  address: "[CONFIRM CURRENT ADDRESS]",
-  phone: "[CONFIRM PHONE NUMBER]",
-  tollFree: "[CONFIRM TOLL-FREE NUMBER]",
-  fax: "[CONFIRM FAX NUMBER]",
+/** Confirmed office contact. Ownership names and owner contact channels are omitted. */
+export const contact = {
+  phone: "(330) 650-2022",
+  phoneHref: "tel:+13306502022",
+  tollFree: "(855) 636-9400",
+  tollFreeHref: "tel:+18556369400",
+  fax: "(877) 496-2071",
   email: "[CONFIRM EMAIL]",
-  mobileOffice: "[CONFIRM MOBILE / AFTER-HOURS NUMBERS]",
-  ownership: "[CONFIRM OWNERSHIP / LEADERSHIP]",
-  licenses: "[CONFIRM LICENSES AND ACCREDITATION STATUS]",
-  insurance: "[CONFIRM CURRENT INSURANCE PARTICIPATION]",
-  government: "[CONFIRM GOVERNMENT CONTRACT PERIODS AND STATUS]",
-} as const;
-
-export const published = {
   addresses: [
     {
-      label: "Published on the current contact / homepage listings",
+      label: "Office",
       line1: "1737 Georgetown Rd. Suite B",
       city: "Hudson",
       state: "OH",
       zip: "44236",
     },
     {
-      label: "Published on the current VA FSS and capability pages",
+      label: "Billing / customer service office",
       line1: "4301 Darrow Rd., Suite 3250",
       city: "Stow",
       state: "OH",
       zip: "44224",
     },
   ],
-  phones: {
-    office: "(330) 650-2022",
-    tollFreeContact: "(855) 636-9400",
-    tollFreeCapability: "(855) 666-9400",
-    fax: "(877) 496-2071",
-    mobileArizona: "(928) 533-2253",
-    mobileOhio: "(216) 287-6437",
-  },
-  emails: {
-    officeManager: "kmcfarland@northcoastorthosales.com",
-    gsaListing: "dfarrell@northcoastorthosales.com",
-  },
-  leadership: [
-    { name: "Dave Farrell", role: "Owner and Business Development / President" },
-    { name: "Kim McFarland", role: "Office Manager" },
-    { name: "Nick Farrell", role: "Manager of Operations" },
-    { name: "Connie Claflin", role: "Billing Specialist" },
-  ],
-  npi: "1316231533",
-  taxonomy: "332B00000X — Durable Medical Equipment & Medical Supplies",
+} as const;
+
+export function formatAddress(
+  address: (typeof contact.addresses)[number],
+) {
+  return `${address.line1}, ${address.city}, ${address.state} ${address.zip}`;
+}
+
+/**
+ * Only fields that are still waiting on a value.
+ * Ownership and former staff contact channels are not collected on the site.
+ */
+export const confirm = {
+  email: contact.email,
 } as const;
 
 export const contracts = {
@@ -78,7 +60,6 @@ export const contracts = {
     fsc: "6515",
     fscGroup: "FSC Group 65, Part II, Section A",
     publishedPeriod: "May 1, 2020 through April 30, 2025",
-    periodConfirm: "[CONFIRM CURRENT FSS CONTRACT PERIOD]",
     itemCount: "3,000+ items as published on the current VA FSS page",
     sins: [
       { code: "A-25A", name: "Splints" },
@@ -94,7 +75,6 @@ export const contracts = {
     primeVendor: "Owens & Minor",
     supplierNumber: "4660",
     itemCount: "Over 1,000+ contracted items available on DMLSS, as published",
-    confirm: "[CONFIRM CURRENT DAPA / DoD / DLA STATUS]",
   },
   identifiers: {
     sam: "CJ4RWBC8AEW9",
@@ -102,7 +82,7 @@ export const contracts = {
     cage: "873M2",
     naics: "339113, 423450",
     size: "Small business, as published",
-    samStatus: "SAM registered, as published — [CONFIRM SAM REGISTRATION]",
+    samStatus: "SAM registered, as published",
   },
 } as const;
 

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { getCategory, productCategories } from "@/lib/products";
@@ -72,8 +71,8 @@ export default async function CategoryPage({ params }: Props) {
               </CtaLink>
             </div>
             <p className="mt-4 text-xs text-slate">
-              Prescription requirements vary by item and payer.{" "}
-              <ConfirmMark>[CONFIRM REFERRAL INTAKE PROCESS]</ConfirmMark>
+              Prescription requirements vary by item and payer. Call or fax the
+              office to refer a patient.
             </p>
           </div>
         </aside>

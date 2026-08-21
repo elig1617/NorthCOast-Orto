@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { ConfirmMark } from "@/components/ConfirmMark";
-import { confirm } from "@/lib/site";
+import { confirm, contact } from "@/lib/site";
 
 type FormKind = "contact" | "referral" | "quote";
 
@@ -42,8 +42,9 @@ export function InquiryForm({ kind = "contact" }: { kind?: FormKind }) {
         <h2 className="mt-2 font-serif text-2xl">Thank you.</h2>
         <p className="mt-3 max-w-prose text-ink-soft">
           This form is ready for a live email or intake endpoint. Until that is
-          connected, please call <ConfirmMark>{confirm.phone}</ConfirmMark> or
-          email <ConfirmMark>{confirm.email}</ConfirmMark>. Do not send medical
+          connected, please call{" "}
+          <a href={contact.phoneHref}>{contact.phone}</a> or email{" "}
+          <ConfirmMark>{confirm.email}</ConfirmMark>. Do not send medical
           records through this page.
         </p>
       </div>

@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
-import { ConfirmNote } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { SpecTable } from "@/components/SpecTable";
-import { confirm, contracts } from "@/lib/site";
+import { contracts } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "VA FSS contractor",
@@ -32,15 +30,7 @@ export default function VaFssPage() {
               { label: "CAGE", value: contracts.identifiers.cage },
               { label: "NAICS", value: contracts.identifiers.naics },
               { label: "Size", value: contracts.identifiers.size },
-              {
-                label: "Period on current site",
-                value: (
-                  <>
-                    {contracts.fss.publishedPeriod}.{" "}
-                    <ConfirmMark>{contracts.fss.periodConfirm}</ConfirmMark>
-                  </>
-                ),
-              },
+              { label: "Period", value: contracts.fss.publishedPeriod },
               {
                 label: "Ordering",
                 value:
@@ -65,16 +55,6 @@ export default function VaFssPage() {
           </div>
         </div>
         <aside className="space-y-5">
-          <ConfirmNote title="Contract status">
-            <p>
-              The current website still prints a period ending April 30, 2025.
-              Public GSA/VA listings may show a later option period. Do not
-              publish a new end date until you confirm it.
-            </p>
-            <p className="mt-2">
-              <ConfirmMark>{confirm.government}</ConfirmMark>
-            </p>
-          </ConfirmNote>
           <div className="border border-line bg-white p-5 text-sm leading-6 text-ink-soft">
             <p className="eyebrow">How federal buyers typically order</p>
             <ol className="mt-3 space-y-2">
@@ -85,8 +65,7 @@ export default function VaFssPage() {
             </ol>
             <p className="mt-4">
               Authorized FSS pricelist PDF, GSA eLibrary catalog, and
-              capability-statement PDF are linked from the current site and
-              should be re-attached after confirmation.
+              capability-statement PDF are available from the office.
             </p>
           </div>
         </aside>

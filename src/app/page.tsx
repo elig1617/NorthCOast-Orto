@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BodyMap } from "@/components/BodyMap";
-import { ConfirmMark } from "@/components/ConfirmMark";
-import { ConfirmNote } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { FigureNote } from "@/components/FigureNote";
 import { howItWorks, photoBriefs, whyChoose } from "@/lib/content";
@@ -10,7 +8,7 @@ import { productCategories } from "@/lib/products";
 import {
   audiences,
   company,
-  confirm,
+  contact,
   contracts,
   credentialsPublished,
   manufacturers,
@@ -53,17 +51,17 @@ export default function HomePage() {
           <TrustCell
             label="VA FSS"
             value={contracts.fss.number}
-            note={contracts.fss.periodConfirm}
+            note={contracts.fss.publishedPeriod}
           />
           <TrustCell
             label="DoD / DAPA"
             value={contracts.dapa.number}
-            note={contracts.dapa.confirm}
+            note={`Through ${contracts.dapa.primeVendor}`}
           />
           <TrustCell
             label="Accreditation"
             value="Exemplary Provider"
-            note={confirm.licenses}
+            note="The Compliance Team"
           />
           <TrustCell
             label="Model"
@@ -95,9 +93,8 @@ export default function HomePage() {
                 our own billing and customer-service operation.
               </p>
               <p>
-                Ownership and office location need to be confirmed before
-                launch: <ConfirmMark>{confirm.ownership}</ConfirmMark>{" "}
-                <ConfirmMark>{confirm.address}</ConfirmMark>
+                Customer service and billing operate from northeast Ohio, with
+                nationwide shipping.
               </p>
             </div>
           </div>
@@ -261,9 +258,6 @@ export default function HomePage() {
               participating provider for Workers’ Compensation, Medicare, and
               Medicaid. It also publishes HIPAA-compliant billing operations.
             </p>
-            <p className="mt-4">
-              <ConfirmMark>{confirm.insurance}</ConfirmMark>
-            </p>
             <div className="mt-6">
               <CtaLink href="/insurance" variant="secondary">
                 Insurance & billing
@@ -273,16 +267,12 @@ export default function HomePage() {
           <div>
             <p className="eyebrow">Institutional / government</p>
             <h2 className="mt-3 font-serif text-3xl">
-              VA FSS and DAPA channels, as published.
+              VA FSS and DAPA channels.
             </h2>
             <p className="mt-4 leading-7 text-ink-soft">
               Federal buyers can order against FSS contract {contracts.fss.number}{" "}
               and DAPA {contracts.dapa.number} through Owens & Minor, supplier
-              #4660. Product counts and periods are taken from the current site
-              and must be verified.
-            </p>
-            <p className="mt-4">
-              <ConfirmMark>{confirm.government}</ConfirmMark>
+              #4660.
             </p>
             <div className="mt-6">
               <CtaLink href="/va-fss-contractor" variant="secondary">
@@ -326,8 +316,9 @@ export default function HomePage() {
               Patients, providers, facilities, and buyers should be able to reach the office in one step.
             </h2>
             <p className="mt-4 text-ink-soft leading-7">
-              Current published office hours are Monday–Friday {company.hours.weekday}.
-              Saturday and Sunday are listed as closed.
+              Office hours are Monday–Friday {company.hours.weekday}. Saturday
+              and Sunday are closed. Call{" "}
+              <a href={contact.phoneHref}>{contact.phone}</a>.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <CtaLink href="/contact">Contact NCOS</CtaLink>
@@ -336,14 +327,13 @@ export default function HomePage() {
               </CtaLink>
             </div>
           </div>
-          <ConfirmNote title="Information to confirm before launch">
-            <p>
-              Address, phone, fax, email, ownership, leadership, licenses,
-              accreditation, insurance participation, and government contract
-              periods are marked throughout the site. See the full checklist on{" "}
-              <Link href="/confirm-before-launch">Information to confirm</Link>.
+          <div className="border border-line bg-white p-6">
+            <p className="eyebrow">Office</p>
+            <p className="mt-3 font-serif text-2xl">{contact.phone}</p>
+            <p className="mt-2 text-sm text-ink-soft">
+              Toll-free {contact.tollFree} · Fax {contact.fax}
             </p>
-          </ConfirmNote>
+          </div>
         </div>
       </section>
     </>

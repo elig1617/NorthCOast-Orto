@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useId, useState } from "react";
 import { Logo } from "@/components/Logo";
 import { nav } from "@/lib/content";
-import { confirm } from "@/lib/site";
+import { contact } from "@/lib/site";
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -57,12 +57,12 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
-          <Link
-            href="/contact"
+          <a
+            href={contact.phoneHref}
             className="text-sm font-medium text-ink no-underline hover:text-red"
           >
-            Call {confirm.phone}
-          </Link>
+            Call {contact.phone}
+          </a>
         </div>
         <button
           type="button"

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { getCategory } from "@/lib/products";
@@ -27,9 +26,6 @@ export default function GsaProductsPage() {
           items, beginning with OA and knee braces. This page preserves those
           published item names. It is not a live e-commerce cart and does not
           invent pricing.
-        </p>
-        <p className="mt-3 text-sm">
-          <ConfirmMark>[CONFIRM CURRENT AUTHORIZED FSS PRICELIST PDF]</ConfirmMark>
         </p>
         <ul className="mt-8 divide-y divide-line border-y border-line">
           {knee?.products.map((product) => (

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
+import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Patient rights and responsibilities",
   description:
-    "Patient rights and responsibilities referenced on the current Northcoast Orthopedic Sales website.",
+    "Patient rights and responsibilities for Northcoast Orthopedic Sales DME patients.",
 };
 
 export default function PatientRightsPage() {
@@ -14,16 +14,12 @@ export default function PatientRightsPage() {
       <PageHero
         eyebrow="Patients"
         title="Patient rights and responsibilities"
-        lede="The current site links a Patient Rights & Responsibilities PDF. This page holds that destination until the confirmed document is attached."
+        lede="NCOS publishes patient rights and responsibilities as part of its DME supplier relationship."
       />
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 space-y-4 leading-7 text-ink-soft">
         <p>
-          NCOS publishes patient rights and responsibilities as part of its
-          DME supplier relationship. The existing PDF should be reviewed and
-          re-linked here.
-        </p>
-        <p>
-          <ConfirmMark>[CONFIRM PATIENT RIGHTS & RESPONSIBILITIES DOCUMENT]</ConfirmMark>
+          For a copy of the current Patient Rights and Responsibilities
+          document, call <a href={contact.phoneHref}>{contact.phone}</a>.
         </p>
       </section>
     </>

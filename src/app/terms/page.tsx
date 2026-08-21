@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
 import { company } from "@/lib/site";
 
@@ -14,7 +13,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms of use"
-        lede="The current Wix site does not publish a substantial terms page. This is a minimal website-use statement, not a new commercial contract."
+        lede="This is a website-use statement, not a commercial supply contract."
       />
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 space-y-4 leading-7 text-ink-soft">
         <p>
@@ -25,11 +24,7 @@ export default function TermsPage() {
         </p>
         <p>
           Product availability, contract pricing, and insurance coverage must
-          be confirmed with the office. Catalog names are taken from the
-          current website and may change.
-        </p>
-        <p>
-          <ConfirmMark>[CONFIRM TERMS OF USE / WEBSITE LEGAL REVIEW]</ConfirmMark>
+          be confirmed with the office. Catalog names may change.
         </p>
       </section>
     </>

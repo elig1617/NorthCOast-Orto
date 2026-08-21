@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
-import { confirm } from "@/lib/site";
+import { confirm, contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Notice of privacy practices",
@@ -15,30 +15,18 @@ export default function PrivacyPage() {
       <PageHero
         eyebrow="Legal"
         title="Notice of privacy practices"
-        lede="The current patient page links a Notice of Privacy Practices. Until a confirmed legal document is provided, this page states only what the existing site already communicates and marks the rest for review."
+        lede="NCOS is the DME supplier for the medical facility a patient may have visited. DME services are handled separately from that medical treatment."
       />
       <section className="mx-auto max-w-3xl px-4 py-12 md:px-6 prose-ncos space-y-4 leading-7 text-ink-soft">
         <p>
-          Northcoast Orthopedic Sales, LLC is the supplier of durable medical
-          equipment for the medical facility a patient may have visited. DME
-          services are handled separately from the medical treatment received
-          at that facility.
+          Northcoast Orthopedic Sales, LLC is HIPAA compliant. Public website
+          forms on this site ask visitors not to submit protected health
+          information. Use the office phone or fax for clinical documents.
         </p>
         <p>
-          The current website states that NCOS is HIPAA compliant / HIPAA
-          certified. This redesign does not invent a full Notice of Privacy
-          Practices. Attach the current legally approved notice before launch.
-        </p>
-        <p>
-          Public website forms on this site ask visitors not to submit
-          protected health information. Use the confirmed office phone, fax, or
-          secure intake process for clinical documents.
-        </p>
-        <p>
-          Privacy officer / contact: <ConfirmMark>{confirm.email}</ConfirmMark>
-        </p>
-        <p>
-          <ConfirmMark>[CONFIRM NOTICE OF PRIVACY PRACTICES DOCUMENT]</ConfirmMark>
+          For a copy of the Notice of Privacy Practices, call{" "}
+          <a href={contact.phoneHref}>{contact.phone}</a> or email{" "}
+          <ConfirmMark>{confirm.email}</ConfirmMark>.
         </p>
       </section>
     </>

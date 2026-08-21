@@ -40,7 +40,7 @@ export const whyChoose = [
   },
   {
     title: "Patient-focused accreditation, as published",
-    text: "The current site states accreditation by The Compliance Team Exemplary Provider Program. [CONFIRM LICENSES AND ACCREDITATION STATUS]",
+    text: "NCOS is accredited by The Compliance Team Exemplary Provider Program for its patient-focused accreditation philosophy.",
   },
 ] as const;
 
@@ -63,7 +63,7 @@ export const howItWorks = [
   {
     step: "04",
     title: "Bill the appropriate payer",
-    text: "Where published, NCOS can bill commercial insurance, Workers’ Compensation, Medicare, Medicaid, or invoice the facility or agency. [CONFIRM CURRENT INSURANCE PARTICIPATION]",
+    text: "NCOS can bill commercial insurance, Workers’ Compensation, Medicare, Medicaid, or invoice the facility or agency.",
   },
 ] as const;
 

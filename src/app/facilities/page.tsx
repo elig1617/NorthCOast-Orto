@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { InquiryForm } from "@/components/InquiryForm";
 import { PageHero } from "@/components/PageHero";
-import { confirm } from "@/lib/site";
+import { contact, formatAddress } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Hospitals and facilities",
@@ -32,9 +31,8 @@ export default function FacilitiesPage() {
             to carry the DME receivable.
           </p>
           <p>
-            Nationwide shipping is published. The customer-service and billing
-            office is currently listed in northeast Ohio.{" "}
-            <ConfirmMark>{confirm.address}</ConfirmMark>
+            Nationwide shipping is available. Customer service and billing
+            operate from {formatAddress(contact.addresses[1])}.
           </p>
           <CtaLink href="/products/er-soft-goods">ER soft goods</CtaLink>
         </div>

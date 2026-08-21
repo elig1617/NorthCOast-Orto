@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { catalogNotes } from "@/lib/products";
-import { confirm, manufacturers } from "@/lib/site";
+import { manufacturers } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Vendors, catalogs, and billing",
@@ -56,10 +55,6 @@ export default function CatalogsPage() {
             <li>HIPAA compliant, as published</li>
             <li>Exemplary Provider accredited by The Compliance Team, as published</li>
           </ul>
-          <p className="mt-4 text-sm">
-            <ConfirmMark>{confirm.insurance}</ConfirmMark>{" "}
-            <ConfirmMark>{confirm.licenses}</ConfirmMark>
-          </p>
           <div className="mt-6">
             <CtaLink href="/contact">Call for current catalogs</CtaLink>
           </div>

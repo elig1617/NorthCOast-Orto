@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
-import { ConfirmNote } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { InquiryForm } from "@/components/InquiryForm";
 import { PageHero } from "@/components/PageHero";
-import { confirm } from "@/lib/site";
+import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Patients",
@@ -30,11 +28,10 @@ export default function PatientsPage() {
               ready.
             </p>
             <p className="mt-3">
-              Call <ConfirmMark>{confirm.phone}</ConfirmMark>
+              Call <a href={contact.phoneHref}>{contact.phone}</a>
             </p>
             <p className="mt-3 text-sm text-slate">
-              An online payment portal is not assumed.{" "}
-              <ConfirmMark>[CONFIRM WHETHER ONLINE BILL PAY EXISTS]</ConfirmMark>
+              Pay by phone with the invoice amount and account number (order ID).
             </p>
           </article>
           <article className="border-t border-line pt-4">
@@ -60,16 +57,14 @@ export default function PatientsPage() {
               </li>
             </ul>
             <p className="mt-3 text-sm text-slate">
-              The current site also invites voluntary feedback through a patient
-              survey.{" "}
-              <ConfirmMark>[CONFIRM CURRENT PATIENT SURVEY URL]</ConfirmMark>
+              The office also invites voluntary feedback about equipment you
+              have received. Ask for the current patient survey when you call.
             </p>
           </article>
-          <ConfirmNote>
-            Patient-facing phone, email, and payment instructions must be
-            confirmed before launch. Do not assume the numbers on the current
-            Wix site are still correct.
-          </ConfirmNote>
+          <p className="text-sm text-slate">
+            For billing questions, call the office. Do not send medical records
+            through the public website form.
+          </p>
         </div>
         <InquiryForm kind="contact" />
       </section>

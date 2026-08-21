@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
-import { confirm } from "@/lib/site";
+import { confirm, contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Accessibility",
@@ -22,8 +22,8 @@ export default function AccessibilityPage() {
           to provide the information in another format.
         </p>
         <p>
-          Accessibility contact: <ConfirmMark>{confirm.email}</ConfirmMark> or{" "}
-          <ConfirmMark>{confirm.phone}</ConfirmMark>
+          Accessibility contact: <a href={contact.phoneHref}>{contact.phone}</a>{" "}
+          or <ConfirmMark>{confirm.email}</ConfirmMark>
         </p>
       </section>
     </>

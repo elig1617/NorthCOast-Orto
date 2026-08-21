@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { CtaLink } from "@/components/CtaLink";
 import { PageHero } from "@/components/PageHero";
 import { services, whyChoose } from "@/lib/content";
-import { confirm } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Our services",
@@ -18,12 +16,12 @@ const listedOfferings = [
   "Shoulder",
   "Knee",
   "Foot and ankle stabilizers and boots",
-  "Bone / spine stimulators — [CONFIRM WHETHER STILL OFFERED]",
+  "Bone / spine stimulators",
   "Ability to work directly with patients with a physician prescription",
   "Low-cost ER orthopedic supply (crutches, ankle stirrups, hand and wrist splints, and similar items)",
   "DME preferred in-network provider, as published",
   "Manufacturer-neutral sourcing contracts with major manufacturers",
-  "Local customer service and billing office (Stow, OH is currently published)",
+  "Local customer service and billing office in Stow, OH",
   "Nationwide shipping of products",
   "Supply and bill for Workers’ Comp related injuries",
 ];
@@ -69,10 +67,6 @@ export default function ServicesPage() {
                 </article>
               ))}
             </div>
-            <p className="mt-6 text-sm">
-              Location currently listed as Stow, OH on this page.{" "}
-              <ConfirmMark>{confirm.address}</ConfirmMark>
-            </p>
             <div className="mt-6">
               <CtaLink href="/products-services">Browse product areas</CtaLink>
             </div>

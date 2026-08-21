@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ConfirmMark } from "@/components/ConfirmMark";
 import { Logo } from "@/components/Logo";
-import { company, confirm, contracts } from "@/lib/site";
+import { company, confirm, contact, contracts, formatAddress } from "@/lib/site";
 
 const productLinks = [
   { href: "/products/knee", label: "Knee" },
@@ -19,7 +19,6 @@ const companyLinks = [
   { href: "/our-services", label: "Services" },
   { href: "/capability-statement", label: "Capability statement" },
   { href: "/contact", label: "Contact" },
-  { href: "/confirm-before-launch", label: "Information to confirm" },
 ];
 
 const patientLinks = [
@@ -50,18 +49,24 @@ export function SiteFooter() {
               billing partner serving commercial and government customers.
             </p>
             <address className="mt-5 text-sm not-italic leading-6">
-              <div>
-                <ConfirmMark>{confirm.address}</ConfirmMark>
-              </div>
+              <div>{formatAddress(contact.addresses[0])}</div>
+              <div className="mt-2">{formatAddress(contact.addresses[1])}</div>
               <div className="mt-2">
-                Office <ConfirmMark>{confirm.phone}</ConfirmMark>
+                Office{" "}
+                <a href={contact.phoneHref} className="text-[#e8e2d6]">
+                  {contact.phone}
+                </a>
+              </div>
+              <div>
+                Toll-free{" "}
+                <a href={contact.tollFreeHref} className="text-[#e8e2d6]">
+                  {contact.tollFree}
+                </a>
               </div>
               <div>
                 Email <ConfirmMark>{confirm.email}</ConfirmMark>
               </div>
-              <div>
-                Fax <ConfirmMark>{confirm.fax}</ConfirmMark>
-              </div>
+              <div>Fax {contact.fax}</div>
             </address>
             <p className="mt-4 font-mono text-[0.68rem] tracking-wide text-[#9c917c]">
               FSS {contracts.fss.number}
@@ -96,10 +101,7 @@ export function SiteFooter() {
               DMEPOS standards
             </Link>
           </div>
-          <p className="mt-4">
-            © {new Date().getFullYear()} {company.legalName}.{" "}
-            <ConfirmMark>{confirm.ownership}</ConfirmMark>
-          </p>
+          <p className="mt-4">© {new Date().getFullYear()} {company.legalName}.</p>
         </div>
       </div>
     </footer>
