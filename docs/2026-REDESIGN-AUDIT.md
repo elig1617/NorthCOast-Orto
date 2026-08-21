@@ -137,24 +137,21 @@ Preserved URLs where they have SEO or buyer meaning. Weak duplicates consolidate
 
 ## 7. Information requiring confirmation
 
-See `/confirm-before-launch` on the built site. Summary:
+Remaining:
 
-- Address (Hudson and Stow both published)
-- Office phone
-- Toll-free (two different numbers published)
-- Fax
-- Emails
-- Mobile numbers
-- Ownership / leadership names and titles
+- Office email — current-site addresses are no longer valid; replacement not yet provided
+
+Removed from the public site:
+
+- Ownership / leadership names, including Dave Farrell, Nick Farrell, and Kim McFarland
+- Former owner and staff emails
+- Personal / mobile numbers
+
+Confirmed as still current from the existing site:
+
+- Office phone (330) 650-2022
+- Toll-free (855) 636-9400
+- Fax (877) 496-2071
+- Hudson and Stow addresses
 - Hours
-- Licenses and Exemplary Provider status
-- Medicare / Medicaid enrollment
-- Insurance participation
-- FSS period and authorized pricelist
-- DAPA / SAM status
-- Bone / spine stimulator offering
-- Team size
-- Patient survey URL
-- Privacy, DMEPOS, and rights PDFs
-- Referral fax / secure intake
-- Whether online bill pay exists
+- Licenses, insurance participation, and government identifiers as already published
