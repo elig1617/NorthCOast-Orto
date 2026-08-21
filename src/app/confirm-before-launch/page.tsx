@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
-import { confirm } from "@/lib/site";
+import { contact, formatAddress } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Information to confirm before launch",
+  title: "Confirmed office details",
   description:
-    "Remaining details that must be provided before the redesigned NCOS website launches.",
+    "Office contact details confirmed for the redesigned Northcoast Orthopedic Sales website.",
   robots: { index: false, follow: false },
 };
 
@@ -14,26 +13,20 @@ export default function ConfirmPage() {
   return (
     <>
       <PageHero
-        eyebrow="Pre-launch"
-        title="Information still needed"
-        lede="Ownership names and former owner contact channels have been removed. Office phone, fax, addresses, hours, credentials, and government identifiers now use the existing published values."
+        eyebrow="Office details"
+        title="Confirmed contact information"
+        lede="Ownership names and former owner contacts stay off the public site. The office address, phone, and email below are the current public details."
       />
-      <section className="mx-auto max-w-4xl px-4 py-12 md:px-6">
-        <ol className="divide-y divide-line border-y border-line">
-          <li className="grid gap-2 py-4 md:grid-cols-[2rem_1fr]">
-            <span className="font-mono text-xs text-slate">01</span>
-            <div>
-              <p>
-                <ConfirmMark>{confirm.email}</ConfirmMark>
-              </p>
-              <p className="mt-2 text-sm leading-6 text-ink-soft">
-                The emails on the current website are no longer valid. A
-                replacement office email has not been provided yet. Former
-                addresses will not be shown on the public site.
-              </p>
-            </div>
-          </li>
-        </ol>
+      <section className="mx-auto max-w-4xl px-4 py-12 md:px-6 space-y-3 leading-7 text-ink-soft">
+        <p>
+          Address: {formatAddress()}
+        </p>
+        <p>
+          Phone: <a href={contact.phoneHref}>{contact.phone}</a>
+        </p>
+        <p>
+          Email: <a href={contact.emailHref}>{contact.email}</a>
+        </p>
       </section>
     </>
   );

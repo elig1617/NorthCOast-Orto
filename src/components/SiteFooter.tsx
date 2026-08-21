@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { Logo } from "@/components/Logo";
-import { company, confirm, contact, contracts, formatAddress } from "@/lib/site";
+import { company, contact, contracts, formatAddress } from "@/lib/site";
 
 const productLinks = [
   { href: "/products/knee", label: "Knee" },
@@ -49,8 +48,7 @@ export function SiteFooter() {
               billing partner serving commercial and government customers.
             </p>
             <address className="mt-5 text-sm not-italic leading-6">
-              <div>{formatAddress(contact.addresses[0])}</div>
-              <div className="mt-2">{formatAddress(contact.addresses[1])}</div>
+              <div>{formatAddress()}</div>
               <div className="mt-2">
                 Office{" "}
                 <a href={contact.phoneHref} className="text-[#e8e2d6]">
@@ -64,7 +62,10 @@ export function SiteFooter() {
                 </a>
               </div>
               <div>
-                Email <ConfirmMark>{confirm.email}</ConfirmMark>
+                Email{" "}
+                <a href={contact.emailHref} className="text-[#e8e2d6]">
+                  {contact.email}
+                </a>
               </div>
               <div>Fax {contact.fax}</div>
             </address>

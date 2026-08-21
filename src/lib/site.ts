@@ -20,38 +20,22 @@ export const contact = {
   tollFree: "(855) 636-9400",
   tollFreeHref: "tel:+18556369400",
   fax: "(877) 496-2071",
-  email: "[CONFIRM EMAIL]",
-  addresses: [
-    {
-      label: "Office",
-      line1: "1737 Georgetown Rd. Suite B",
-      city: "Hudson",
-      state: "OH",
-      zip: "44236",
-    },
-    {
-      label: "Billing / customer service office",
-      line1: "4301 Darrow Rd., Suite 3250",
-      city: "Stow",
-      state: "OH",
-      zip: "44224",
-    },
-  ],
+  email: "rdenciger@northcoastorthopedics.com",
+  emailHref: "mailto:rdenciger@northcoastorthopedics.com",
+  address: {
+    label: "Office",
+    line1: "1737 Georgetown Rd. Suite B",
+    city: "Hudson",
+    state: "OH",
+    zip: "44236",
+  },
 } as const;
 
 export function formatAddress(
-  address: (typeof contact.addresses)[number],
+  address: typeof contact.address = contact.address,
 ) {
   return `${address.line1}, ${address.city}, ${address.state} ${address.zip}`;
 }
-
-/**
- * Only fields that are still waiting on a value.
- * Ownership and former staff contact channels are not collected on the site.
- */
-export const confirm = {
-  email: contact.email,
-} as const;
 
 export const contracts = {
   fss: {

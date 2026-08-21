@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CtaLink } from "@/components/CtaLink";
 import { InquiryForm } from "@/components/InquiryForm";
 import { PageHero } from "@/components/PageHero";
-import { contact, formatAddress } from "@/lib/site";
+import { formatAddress } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Hospitals and facilities",
@@ -32,7 +32,7 @@ export default function FacilitiesPage() {
           </p>
           <p>
             Nationwide shipping is available. Customer service and billing
-            operate from {formatAddress(contact.addresses[1])}.
+            operate from {formatAddress()}.
           </p>
           <CtaLink href="/products/er-soft-goods">ER soft goods</CtaLink>
         </div>

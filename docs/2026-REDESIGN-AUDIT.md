@@ -137,21 +137,17 @@ Preserved URLs where they have SEO or buyer meaning. Weak duplicates consolidate
 
 ## 7. Information requiring confirmation
 
-Remaining:
+Confirmed public contact:
 
-- Office email — current-site addresses are no longer valid; replacement not yet provided
+- Address: 1737 Georgetown Rd. Suite B, Hudson, OH 44236
+- Office phone: (330) 650-2022
+- Toll-free: (855) 636-9400
+- Fax: (877) 496-2071
+- Email: rdenciger@northcoastorthopedics.com
 
 Removed from the public site:
 
 - Ownership / leadership names, including Dave Farrell, Nick Farrell, and Kim McFarland
 - Former owner and staff emails
 - Personal / mobile numbers
-
-Confirmed as still current from the existing site:
-
-- Office phone (330) 650-2022
-- Toll-free (855) 636-9400
-- Fax (877) 496-2071
-- Hudson and Stow addresses
-- Hours
-- Licenses, insurance participation, and government identifiers as already published
+- The Stow / Darrow Road address

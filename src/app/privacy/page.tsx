@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { PageHero } from "@/components/PageHero";
-import { confirm, contact } from "@/lib/site";
+import { contact } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Notice of privacy practices",
@@ -26,7 +25,7 @@ export default function PrivacyPage() {
         <p>
           For a copy of the Notice of Privacy Practices, call{" "}
           <a href={contact.phoneHref}>{contact.phone}</a> or email{" "}
-          <ConfirmMark>{confirm.email}</ConfirmMark>.
+          <a href={contact.emailHref}>{contact.email}</a>.
         </p>
       </section>
     </>

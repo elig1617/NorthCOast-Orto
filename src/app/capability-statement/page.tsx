@@ -29,7 +29,7 @@ export default function CapabilityPage() {
           </p>
           <p>
             Qualifications include manufacturer-neutral sourcing, nationwide
-            shipping, a customer-service and billing office in Stow, Ohio,
+            shipping, a customer-service and billing office in Hudson, Ohio,
             preferred in-network DME status for the majority of insurances, and
             a single sourcing point for orthopedic needs.
           </p>
@@ -59,7 +59,7 @@ export default function CapabilityPage() {
               { label: "SAM UEI", value: contracts.identifiers.sam },
               { label: "FSS", value: contracts.fss.number },
               { label: "DAPA", value: contracts.dapa.number },
-              { label: "Office", value: formatAddress(contact.addresses[1]) },
+              { label: "Office", value: formatAddress() },
               { label: "Phone", value: contact.phone },
             ]}
           />

@@ -21,7 +21,7 @@ const listedOfferings = [
   "Low-cost ER orthopedic supply (crutches, ankle stirrups, hand and wrist splints, and similar items)",
   "DME preferred in-network provider, as published",
   "Manufacturer-neutral sourcing contracts with major manufacturers",
-  "Local customer service and billing office in Stow, OH",
+  "Local customer service and billing office in Hudson, OH",
   "Nationwide shipping of products",
   "Supply and bill for Workers’ Comp related injuries",
 ];

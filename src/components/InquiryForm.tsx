@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ConfirmMark } from "@/components/ConfirmMark";
-import { confirm, contact } from "@/lib/site";
+import { contact } from "@/lib/site";
 
 type FormKind = "contact" | "referral" | "quote";
 
@@ -44,7 +43,7 @@ export function InquiryForm({ kind = "contact" }: { kind?: FormKind }) {
           This form is ready for a live email or intake endpoint. Until that is
           connected, please call{" "}
           <a href={contact.phoneHref}>{contact.phone}</a> or email{" "}
-          <ConfirmMark>{confirm.email}</ConfirmMark>. Do not send medical
+          <a href={contact.emailHref}>{contact.email}</a>. Do not send medical
           records through this page.
         </p>
       </div>
@@ -98,8 +97,8 @@ export function InquiryForm({ kind = "contact" }: { kind?: FormKind }) {
           Send to the office
         </button>
         <p className="text-xs text-slate">
-          Submissions will route to <ConfirmMark>{confirm.email}</ConfirmMark>{" "}
-          once confirmed.
+          Submissions will route to{" "}
+          <a href={contact.emailHref}>{contact.email}</a>.
         </p>
       </div>
     </form>

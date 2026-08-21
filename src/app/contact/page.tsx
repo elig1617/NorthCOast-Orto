@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { ConfirmMark } from "@/components/ConfirmMark";
 import { InquiryForm } from "@/components/InquiryForm";
 import { PageHero } from "@/components/PageHero";
 import { SpecTable } from "@/components/SpecTable";
-import { company, confirm, contact, formatAddress } from "@/lib/site";
+import { company, contact, formatAddress } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -24,12 +23,8 @@ export default function ContactPage() {
           <SpecTable
             rows={[
               {
-                label: "Hudson office",
-                value: formatAddress(contact.addresses[0]),
-              },
-              {
-                label: "Stow office",
-                value: formatAddress(contact.addresses[1]),
+                label: "Address",
+                value: formatAddress(),
               },
               {
                 label: "Office",
@@ -42,7 +37,7 @@ export default function ContactPage() {
               { label: "Fax", value: contact.fax },
               {
                 label: "Email",
-                value: <ConfirmMark>{confirm.email}</ConfirmMark>,
+                value: <a href={contact.emailHref}>{contact.email}</a>,
               },
               {
                 label: "Hours",
